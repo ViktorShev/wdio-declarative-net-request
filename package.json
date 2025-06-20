@@ -21,6 +21,12 @@
     "url": "https://github.com/ViktorShev/wdio-declarative-net-request/issues"
   },
   "homepage": "https://github.com/ViktorShev/wdio-declarative-net-request#readme",
+  "main": "dist/service/index.js",
+  "types": "dist/service/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc"
+  },
   "devDependencies": {
     "@types/chrome": "^0.0.326",
     "typescript": "^5.8.3"
