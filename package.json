@@ -3,6 +3,23 @@
   "description": "A package allowing the use of declarativeNetRequest API for use with WebdriverIO by compiling a Chrome extension through a WebdriverIO service.",
   "packageManager": "yarn@4.9.2",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktorShev/wdio-declarative-net-request.git"
+  },
+  "keywords": [
+    "wdio",
+    "request",
+    "intercept",
+    "declarativeNetRequest",
+    "webdriver",
+    "webdriverio",
+    "headers"
+  ],
+  "bugs": {
+    "url": "https://github.com/ViktorShev/wdio-declarative-net-request/issues"
+  },
+  "homepage": "https://github.com/ViktorShev/wdio-declarative-net-request#readme",
   "devDependencies": {
     "@types/chrome": "^0.0.326",
     "typescript": "^5.8.3"
