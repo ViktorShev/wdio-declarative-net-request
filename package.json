@@ -2,6 +2,7 @@
   "name": "wdio-declarative-net-request",
   "description": "A package allowing the use of declarativeNetRequest API for use with WebdriverIO by compiling a Chrome extension through a WebdriverIO service.",
   "packageManager": "yarn@4.9.2",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
