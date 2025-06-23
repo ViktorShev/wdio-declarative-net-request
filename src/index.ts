@@ -54,3 +54,5 @@ export async function getDnrExtensionBase64 (
 
   return extensionBase64
 }
+
+export const ALL_RESOURCE_TYPES = Object.values(chrome.declarativeNetRequest.ResourceType)
