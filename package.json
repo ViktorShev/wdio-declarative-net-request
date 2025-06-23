@@ -30,7 +30,7 @@
   "scripts": {
     "build": "rm -rf dist && tsc && bash scripts/add-type-reference.sh && bash scripts/copy-files.sh",
     "keygen": "crx keygen src/extension && mv src/extension/key.pem src/extension/dummy-dev-key.pem",
-    "publish": "yarn build && npm publish"
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@types/node": "^24.0.3",
