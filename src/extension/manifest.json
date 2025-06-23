@@ -3,16 +3,19 @@
   "description": "A Chrome extension allowing the use of declarativeNetRequest API for use with WebdriverIO.",
   "version": "1.0.0",
   "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
   },
   "permissions": [
     "declarativeNetRequest"
   ],
   "host_permissions": [
     "<all_urls>"
-  ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; script-src-elem https://firebasestorage.googleapis.com; object-src 'self'"
-  }
+  ]
 }

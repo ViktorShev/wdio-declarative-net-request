@@ -4,6 +4,7 @@
   "packageManager": "yarn@4.9.2",
   "version": "2.0.0",
   "license": "MIT",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ViktorShev/wdio-declarative-net-request.git"
@@ -27,7 +28,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsc && bash scripts/add-type-reference.sh && bash scripts/copy-manifest.sh"
+    "build": "rm -rf dist && tsc && bash scripts/add-type-reference.sh && bash scripts/copy-files.sh",
+    "keygen": "crx keygen src/extension && mv src/extension/key.pem src/extension/dummy-dev-key.pem",
+    "publish": "yarn build && npm publish"
   },
   "devDependencies": {
     "@types/node": "^24.0.3",
@@ -35,8 +38,6 @@
   },
   "dependencies": {
     "@types/chrome": "^0.0.326",
-    "abind": "^1.0.5",
-    "crx": "^5.0.1",
-    "esbuild": "^0.25.5"
+    "crx": "^5.0.1"
   }
 }
