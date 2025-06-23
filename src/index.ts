@@ -25,10 +25,15 @@ async function writeRulesFile (rules: DeclarativeNetRequestRules) {
 async function bundleExtension (rules: DeclarativeNetRequestRules) {
   const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'wdio-dnr-'))
   const rulesFilePath = await writeRulesFile(rules)
+  
+  await fs.copyFile(
+    path.join(EXTENSION_DIR, 'manifest.json'),
+    path.join(tmpDir, 'manifest.json')
+  )
 
   const result = await build({
     entryPoints: [
-      path.join(EXTENSION_DIR, 'background.ts'),
+      path.join(EXTENSION_DIR, 'background.js'),
       rulesFilePath
     ],
     bundle: true,

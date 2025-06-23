@@ -27,7 +27,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsc && bash scripts/add-type-reference.sh"
+    "build": "rm -rf dist && tsc && bash scripts/add-type-reference.sh && bash scripts/copy-manifest.sh"
   },
   "devDependencies": {
     "@types/node": "^24.0.3",
