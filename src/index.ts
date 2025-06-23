@@ -78,7 +78,7 @@ export async function getDnrExtensionBase64 (
   return extensionBase64
 }
 
-export function getUnpackedExtensionPathSync (rules: DeclarativeNetRequestRules): string {
+export function getUnpackedDnrExtensionPathSync (rules: DeclarativeNetRequestRules): string {
   const bundledExtensionDir = bundleExtensionSync(rules)
 
   return bundledExtensionDir
