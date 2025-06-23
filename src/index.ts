@@ -3,8 +3,12 @@ import { build } from 'esbuild'
 import fs from 'fs/promises'
 import os from 'os'
 import path from 'path'
+import { fileURLToPath } from 'url'
 
-const EXTENSION_DIR = path.join(__dirname, './extension')
+const __filename__ = fileURLToPath(import.meta.url);
+const __dirname__ = path.dirname(__filename__);
+
+const EXTENSION_DIR = path.join(__dirname__, './extension')
 
 export type DeclarativeNetRequestRule = chrome.declarativeNetRequest.Rule
 export type DeclarativeNetRequestRules = DeclarativeNetRequestRule[]
