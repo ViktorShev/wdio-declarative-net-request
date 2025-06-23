@@ -1,6 +1,6 @@
 # wdio-declarative-net-request
 
-A package allowing the use of declarativeNetRequest API for use with WebdriverIO by compiling a Chrome extension through a WebdriverIO service.
+A WebdriverIO utility allowing the use of Chrome's declarativeNetRequest API by dynamically generating an extension at runtime from user-defined rules.
 
 # Example usage:
 

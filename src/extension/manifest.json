@@ -1,6 +1,6 @@
 {
   "name": "wdio-declarative-net-request",
-  "description": "A Chrome extension allowing the use of declarativeNetRequest API for use with WebdriverIO.",
+  "description": "A Chrome extension utilizing the declarativeNetRequest API.",
   "version": "1.0.0",
   "manifest_version": 3,
   "declarative_net_request": {
