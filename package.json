@@ -2,7 +2,7 @@
   "name": "wdio-declarative-net-request",
   "description": "A package allowing the use of declarativeNetRequest API for use with WebdriverIO by compiling a Chrome extension through a WebdriverIO service.",
   "packageManager": "yarn@4.9.2",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -21,24 +21,21 @@
     "url": "https://github.com/ViktorShev/wdio-declarative-net-request/issues"
   },
   "homepage": "https://github.com/ViktorShev/wdio-declarative-net-request#readme",
-  "main": "dist/service/index.js",
-  "types": "dist/service/index.d.ts",
-  "files": ["dist"],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsc"
+    "build": "rm -rf dist && tsc && bash scripts/add-type-reference.sh"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.326",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@rollup/plugin-node-resolve": "^16.0.1",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^12.1.3",
-    "@wdio/types": "^9.15.0",
+    "@types/chrome": "^0.0.326",
     "abind": "^1.0.5",
     "crx": "^5.0.1",
-    "rollup": "^4.44.0",
-    "rollup-plugin-copy": "^3.5.0"
+    "esbuild": "^0.25.5"
   }
 }
