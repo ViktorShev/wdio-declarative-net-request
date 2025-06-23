@@ -1,4 +1,5 @@
 import ChromeExtension from 'crx'
+import fsSync from 'fs'
 import fs from 'fs/promises'
 import os from 'os'
 import path from 'path'
@@ -21,6 +22,15 @@ async function writeRulesFile (rules: DeclarativeNetRequestRules, baseDir: strin
   return rulesFilePath
 }
 
+function writeRulesFileSync (rules: DeclarativeNetRequestRules, baseDir: string): string {
+  const rulesFilePath = path.join(baseDir, 'rules.json')
+  const rulesContent = JSON.stringify(rules, null, 2)
+
+  fsSync.writeFileSync(rulesFilePath, rulesContent)
+  
+  return rulesFilePath
+}
+
 async function bundleExtension (rules: DeclarativeNetRequestRules) {
   const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'wdio-dnr-'))
 
@@ -30,6 +40,19 @@ async function bundleExtension (rules: DeclarativeNetRequestRules) {
   )
 
   await writeRulesFile(rules, tmpDir)
+
+  return tmpDir
+}
+
+function bundleExtensionSync (rules: DeclarativeNetRequestRules): string {
+  const tmpDir = fsSync.mkdtempSync(path.join(os.tmpdir(), 'wdio-dnr-'))
+
+  fsSync.copyFileSync(
+    path.join(EXTENSION_DIR, 'manifest.json'),
+    path.join(tmpDir, 'manifest.json')
+  )
+
+  writeRulesFileSync(rules, tmpDir)
 
   return tmpDir
 }
@@ -55,4 +78,8 @@ export async function getDnrExtensionBase64 (
   return extensionBase64
 }
 
-export const ALL_RESOURCE_TYPES = Object.values(chrome.declarativeNetRequest.ResourceType)
+export function getUnpackedExtensionPathSync (rules: DeclarativeNetRequestRules): string {
+  const bundledExtensionDir = bundleExtensionSync(rules)
+
+  return bundledExtensionDir
+}
