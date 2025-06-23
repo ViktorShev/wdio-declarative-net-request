@@ -30,6 +30,7 @@
     "build": "rm -rf dist && tsc && bash scripts/add-type-reference.sh"
   },
   "devDependencies": {
+    "@types/node": "^24.0.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {

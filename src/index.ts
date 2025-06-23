@@ -6,7 +6,8 @@ import path from 'path'
 
 const EXTENSION_DIR = path.join(__dirname, './extension')
 
-export type DeclarativeNetRequestRules = chrome.declarativeNetRequest.Rule[]
+export type DeclarativeNetRequestRule = chrome.declarativeNetRequest.Rule
+export type DeclarativeNetRequestRules = DeclarativeNetRequestRule[]
 
 async function writeRulesFile (rules: DeclarativeNetRequestRules) {
   const rulesFilePath = path.join(EXTENSION_DIR, 'rules.ts')

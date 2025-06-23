@@ -213,6 +213,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^24.0.3":
+  version: 24.0.3
+  resolution: "@types/node@npm:24.0.3"
+  dependencies:
+    undici-types: "npm:~7.8.0"
+  checksum: 10c0/9c3c4e87600d1cf11e291c2fd4bfd806a615455463c30a0ef6dc9c801b3423344d9b82b8084e3ccabce485a7421ebb61a66e9676181bd7d9aea4759998a120d5
+  languageName: node
+  linkType: hard
+
 "abind@npm:^1.0.5":
   version: 1.0.5
   resolution: "abind@npm:1.0.5"
@@ -775,6 +784,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~7.8.0":
+  version: 7.8.0
+  resolution: "undici-types@npm:7.8.0"
+  checksum: 10c0/9d9d246d1dc32f318d46116efe3cfca5a72d4f16828febc1918d94e58f6ffcf39c158aa28bf5b4fc52f410446bc7858f35151367bd7a49f21746cab6497b709b
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -787,6 +803,7 @@ __metadata:
   resolution: "wdio-declarative-net-request@workspace:."
   dependencies:
     "@types/chrome": "npm:^0.0.326"
+    "@types/node": "npm:^24.0.3"
     abind: "npm:^1.0.5"
     crx: "npm:^5.0.1"
     esbuild: "npm:^0.25.5"
