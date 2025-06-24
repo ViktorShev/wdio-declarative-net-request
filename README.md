@@ -1,4 +1,4 @@
-# wdio-declarative-net-request
+# wdio-declarative-net-request [![npm version](https://img.shields.io/npm/v/wdio-declarative-net-request.svg)](https://www.npmjs.com/package/wdio-declarative-net-request)
 
 A WebdriverIO utility allowing the use of Chrome's declarativeNetRequest API by dynamically generating an extension at runtime from user-defined rules.
 

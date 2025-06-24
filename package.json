@@ -2,7 +2,7 @@
   "name": "wdio-declarative-net-request",
   "description": "A WebdriverIO utility allowing the use of Chrome's declarativeNetRequest API by dynamically generating an extension at runtime from user-defined rules.",
   "packageManager": "yarn@4.9.2",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "license": "MIT",
   "type": "module",
   "repository": {
