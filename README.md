@@ -24,7 +24,7 @@ const rules: DeclarativeNetRequestRules = [
       ]
     },
     condition: {
-      resourceTypes: [...],
+      resourceTypes: ['xmlhttprequest'],
     }
   }
 ]
@@ -52,14 +52,14 @@ export const config = {
 },
 ```
 
-If you are unable to use top-level await due to CJS or any other reason you can use the sync method `getUnpackedExtensionPathSync`.
+If you are unable to use top-level await due to CJS or any other reason you can use the sync method `getUnpackedDnrExtensionPathSync`.
 This will bundle the necessary extension files synchronously but will skip packing it into a `.crx` file and encoding it into base64.
 Instead it will return the path to the directory that contains the extension, which you can load into WebdriverIO like so:
 
 ```ts
 // wdio.conf.ts
 
-const extensionDir = getUnpackedExtensionPathSync(rules)
+const extensionDir = getUnpackedDnrExtensionPathSync(rules)
 
 ...
     'goog:chromeOptions': {
