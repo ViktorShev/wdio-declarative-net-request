@@ -9,6 +9,7 @@ declare module 'crx' {
     src?: string | null,
     version?: number | null,
   }
+  
   export default class Crx {
     constructor(options?: CrxOptions)
     load(path: string): Promise<void>
