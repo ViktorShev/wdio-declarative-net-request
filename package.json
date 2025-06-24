@@ -28,7 +28,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsc && bash scripts/add-type-reference.sh && bash scripts/copy-files.sh",
+    "build": "rm -rf dist && tsc && bash scripts/build.sh",
     "keygen": "crx keygen src/extension && mv src/extension/key.pem src/extension/dummy-dev-key.pem",
     "prepublishOnly": "yarn build"
   },
